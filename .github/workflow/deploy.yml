@@ -3,16 +3,16 @@ on:
   push:
     branches:
       - master
-
+permissions:
+      contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    
     steps:
       - name: checkout
         uses: actions/checkout@v3
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
-        with: 
-          publish_dir: ../public
+          with: 
+            publish_dir: ./public
