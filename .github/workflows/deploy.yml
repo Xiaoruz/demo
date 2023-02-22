@@ -16,3 +16,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with: 
             publish_dir: ./public
+            publish_branch: gh-pages
